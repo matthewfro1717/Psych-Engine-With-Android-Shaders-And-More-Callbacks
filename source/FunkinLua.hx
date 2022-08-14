@@ -29,6 +29,9 @@ import openfl.utils.Assets;
 import flixel.math.FlxMath;
 import flixel.util.FlxSave;
 import flixel.addons.transition.FlxTransitionableState;
+#if windows
+import lime.app.Application;
+#end
 #if sys
 import sys.FileSystem;
 import sys.io.File;
