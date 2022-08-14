@@ -210,6 +210,17 @@ class FunkinLua {
 		#else
 		set('buildTarget', 'unknown');
 		#end
+			
+		//pretty simple functions for now
+		#if windows
+		Lua_helper.add_callback(lua, "changeGameTitle", function(name:String){
+			Application.current.window.title = name;
+		});
+		#end
+			
+		Lua_helper.add_callback(lua, "crashGame", function(code:Int){
+			Sys.exit(code);
+		});
 
 		Lua_helper.add_callback(lua, "getRunningScripts", function(){
 			var runningScripts:Array<String> = [];
