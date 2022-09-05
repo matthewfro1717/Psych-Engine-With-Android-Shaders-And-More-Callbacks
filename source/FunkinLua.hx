@@ -819,7 +819,7 @@ class FunkinLua {
 						PlayState.instance.callOnLuas('onTweenCompleted', [tag]);
 						PlayState.instance.modchartTweens.remove(tag);
 					}
-				}));
+				});
 			} else {
 				luaTrace('Couldnt find object: ' + vars, false, false, FlxColor.RED);
 			}
