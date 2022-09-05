@@ -814,12 +814,12 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "doTweenX", function(tag:String, vars:String, value:Dynamic, duration:Float, ease:String, tweenType:String) {
 			var penisExam:Dynamic = tweenShit(tag, vars);
 			if(penisExam != null) {
-					PlayState.instance.modchartTweens.set(tag, FlxTween.tween(penisExam, {x: value}, duration, {type: getTweenTypeFromSTring(tweenType), getFlxEaseByString(ease),
+					PlayState.instance.modchartTweens.set(tag, FlxTween.tween(penisExam, {x: value}, duration, {type: getTweenTypeFromString(tweenType), ease: getFlxEaseByString(ease),
 					onComplete: function(twn:FlxTween) {
 						PlayState.instance.callOnLuas('onTweenCompleted', [tag]);
 						PlayState.instance.modchartTweens.remove(tag);
 					}
-				});
+				}));
 			} else {
 				luaTrace('Couldnt find object: ' + vars, false, false, FlxColor.RED);
 			}
