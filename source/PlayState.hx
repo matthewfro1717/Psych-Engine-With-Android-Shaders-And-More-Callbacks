@@ -431,8 +431,8 @@ class PlayState extends MusicBeatState
 					curStage = 'schoolEvil';
 				case 'ugh' | 'guns' | 'stress':
 					curStage = 'tank';
-				case 'apple-leak'
-					curStage = 'gstation'
+				case 'apple-leak':
+					curStage = 'gstation';
 				default:
 					curStage = 'stage';
 			}
