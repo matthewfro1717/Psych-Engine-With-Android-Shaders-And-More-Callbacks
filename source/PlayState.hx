@@ -431,6 +431,8 @@ class PlayState extends MusicBeatState
 					curStage = 'schoolEvil';
 				case 'ugh' | 'guns' | 'stress':
 					curStage = 'tank';
+				case 'apple-leak'
+					curStage = 'gstation'
 				default:
 					curStage = 'stage';
 			}
@@ -510,6 +512,10 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+		        
+			case 'gstation':
+				var bg:BGSprite = new BGSprite('appleLeak/gas_station', -771, -798, 1, 1);
+				add(bg);
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
