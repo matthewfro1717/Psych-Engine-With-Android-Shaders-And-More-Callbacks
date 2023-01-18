@@ -2549,7 +2549,6 @@ class FunkinLua {
 			case 'persist': return FlxTweenType.PERSIST;
 			case 'oneshot': return FlxTweenType.ONESHOT;
 		}
-		return FlxTweenType.globalManager;
 	}
 
 	//Better optimized than using some getProperty shit or idk
